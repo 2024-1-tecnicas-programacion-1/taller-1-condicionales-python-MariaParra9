@@ -1,6 +1,17 @@
 def evaluar(peso, estatura, edad):
-    # TODO: Coloca aquí el código del ejercicio 8: Índice de masa corporal
-    return "";
+    # Se calcula el índice de masa corporal
+    imc = peso / (estatura ** 2)
+    
+    # Se aplican las condiciones para determinar el nivel de riesgo de enfermedades coronarias
+    if edad < 45 and imc < 22:
+        respuesta = "Bajo"
+    elif edad < 45 and imc >= 22:
+        respuesta = "Medio"
+    elif edad >= 45 and imc < 22:
+        respuesta = "Medio"
+    elif edad >= 45 and imc >= 22:
+        respuesta = "Alto"
+    return respuesta
 
 if __name__ == '__main__':
     print("Peso:", end="")
